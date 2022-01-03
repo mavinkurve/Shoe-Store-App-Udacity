@@ -30,6 +30,16 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.33" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username_label_text"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/login_guideline" />
+
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edittext_username"
             android:layout_width="match_parent"
@@ -40,7 +50,18 @@
             android:inputType="textEmailAddress"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/login_guideline" />
+            app:layout_constraintTop_toBottomOf="@id/textView_username" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/password"
+            app:layout_constraintHorizontal_bias="0.10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edittext_username" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edittext_password"
@@ -52,7 +73,7 @@
             android:inputType="textPassword"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edittext_username" />
+            app:layout_constraintTop_toBottomOf="@id/textView_password" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_signin"

@@ -32,4 +32,5 @@
     <string name="header_shoe_detail_text">Add Shoe Details</string>
     <string name="hint_shoe_detail_name">Shoe Name</string>
     <string name="hint_shoe_detail_size">Size</string>
+    <string name="username_label_text">User Name</string>
 </resources>

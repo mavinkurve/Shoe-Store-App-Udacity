@@ -36,17 +36,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/instruction_guideline" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="288dp"
-            android:layout_marginBottom="17dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/instruction_textView_2"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="-27dp" />
-
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/instruction_textView_2"
             style="@style/default_textview_style"
