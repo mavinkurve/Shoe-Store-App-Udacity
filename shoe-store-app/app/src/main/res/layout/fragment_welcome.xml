@@ -3,52 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/layout_welcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screens.WelcomeFragment">
+        tools:context=".screens.WelcomeFragment"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:id="@+id/header_welcome"
             style="@style/default_header"
             android:text="@string/header_welcome_text"
-            app:layout_constraintBottom_toBottomOf="@id/welcome_guideline"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+             />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/welcome_guideline"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.33" />
-
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:id="@+id/welcome_textView"
             android:text="@string/welcome_text_1"
             style="@style/default_textview_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_padding"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/welcome_guideline" />
+           />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:id="@+id/welcome_textView_2"
             android:text="@string/welcome_text_2"
             style="@style/default_textview_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_padding"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcome_textView" />
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_welcome_go"
+            style="@style/default_button_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_padding"
@@ -57,5 +45,5 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/welcome_textView_2" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

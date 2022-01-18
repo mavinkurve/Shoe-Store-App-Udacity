@@ -15,6 +15,7 @@ import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.models.LoginViewModel
 import timber.log.Timber
 import android.view.*
+import android.widget.Toast
 
 
 /**
@@ -59,6 +60,7 @@ class LoginFragment : Fragment() {
 
         viewModel.loginState.observe(viewLifecycleOwner, Observer { loggedIn ->
             if (loggedIn) {
+                Toast.makeText(context,"Login successful",Toast.LENGTH_SHORT).show()
                 Timber.d("User is logged in. Navigating to welcome screen")
                 findNavController().navigate(LoginFragmentDirections.actionLogin())
             }

@@ -11,9 +11,11 @@
         <entry key="app/src/main/res/drawable/shoe_1.xml" value="0.22864583333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/layout/fragment_add_shoe.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/layout/fragment_instruction.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/fragment_shoe_detail.xml" value="0.32083333333333336" />
         <entry key="app/src/main/res/layout/fragment_shoe_list.xml" value="0.21979166666666666" />
+        <entry key="app/src/main/res/layout/fragment_welcome.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/layout_shoe.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/recycler_view_item.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/shoe_detail_view.xml" value="0.32083333333333336" />
