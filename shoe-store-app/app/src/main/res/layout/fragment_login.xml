@@ -5,14 +5,14 @@
     <data>
         <variable
             name="loginViewModel"
-            type="com.udacity.shoestore.screen.login.LoginViewModel" />
+            type="com.udacity.shoestore.models.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_login"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screen.login.LoginFragment">
+        tools:context=".screens.LoginFragment">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/header_login"
@@ -80,8 +80,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/standard_padding"
-            android:text="@string/action_sign_in_short"
             android:onClick="@{() -> loginViewModel.onSigninClick()}"
+            android:text="@string/action_sign_in_short"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edittext_password" />

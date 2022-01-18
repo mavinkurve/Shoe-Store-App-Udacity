@@ -1,16 +1,14 @@
-package com.udacity.shoestore.screen.instruction
+package com.udacity.shoestore.screens
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
-import com.udacity.shoestore.databinding.FragmentWelcomeBinding
-import com.udacity.shoestore.screen.welcome.WelcomeFragmentDirections
 
 /**
  * A simple [Fragment] subclass.
@@ -32,10 +30,16 @@ class InstructionFragment : Fragment() {
             false
         )
 
+
         binding.btnInstructionGo.setOnClickListener {
             findNavController().navigate(InstructionFragmentDirections.actionInstructionFragmentToShoeListFragment())
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar?.title = getString(R.string.onboarding_title)
     }
 }

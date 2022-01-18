@@ -1,9 +1,10 @@
-package com.udacity.shoestore.screen.login
+package com.udacity.shoestore.models
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import timber.log.Timber
 
 class LoginViewModel : ViewModel() {
     private val _loginState = MutableLiveData<Boolean>()
@@ -15,7 +16,7 @@ class LoginViewModel : ViewModel() {
         get() = _eventLoginCompleted
 
     init {
-        Log.i("LoginViewModel","LoginViewModel created!")
+        Timber.i("LoginViewModel created!")
         _loginState.value = false
     }
 

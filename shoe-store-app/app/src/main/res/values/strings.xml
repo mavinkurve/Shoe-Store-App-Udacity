@@ -24,8 +24,6 @@
     <string name="header_welcome_text">Welcome to my shoe store</string>
     <string name="welcome_text_2">Click \'GO\' to get started</string>
     <string name="see_shoe_list_button_text">Go to shoe list</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_new_shoe">Add new shoe</string>
     <string name="save_button_text">Save</string>
     <string name="cancel_button_text">Cancel</string>
@@ -33,4 +31,17 @@
     <string name="hint_shoe_detail_name">Shoe Name</string>
     <string name="hint_shoe_detail_size">Size</string>
     <string name="username_label_text">User Name</string>
+    <string name="ShoeName">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="string_format">%s</string>
+    <string name="number_format">%.2f</string>
+    <string name="list_of_shoes">List of shoes</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="shoe_list_title">All Shoes</string>
+    <string name="shoe_store_title">My Shore Store</string>
+    <string name="onboarding_title">Onboarding Instructions</string>
+    <string name="add_shoe_title">Add new shoe</string>
 </resources>

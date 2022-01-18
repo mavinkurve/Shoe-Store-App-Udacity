@@ -1,22 +1,20 @@
-package com.udacity.shoestore.screen.login
+package com.udacity.shoestore.screens
 
-import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
-import android.content.Context.INPUT_METHOD_SERVICE as INPUT_METHOD_SERVICE1
+import com.udacity.shoestore.models.LoginViewModel
+import timber.log.Timber
+import android.view.*
 
 
 /**
@@ -43,6 +41,8 @@ class LoginFragment : Fragment() {
             false
         )
 
+        setHasOptionsMenu(true);
+
         binding.lifecycleOwner = this
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
@@ -59,10 +59,8 @@ class LoginFragment : Fragment() {
 
         viewModel.loginState.observe(viewLifecycleOwner, Observer { loggedIn ->
             if (loggedIn) {
-                Log.i("LoginFragment", "Navigating to welcome screen")
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
-
-
+                Timber.d("User is logged in. Navigating to welcome screen")
+                findNavController().navigate(LoginFragmentDirections.actionLogin())
             }
         })
 
@@ -73,5 +71,18 @@ class LoginFragment : Fragment() {
         // Hide the keyboard.
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view?.windowToken, 0)
+
+        findNavController().navigate(LoginFragmentDirections.actionLogin())
     }
+
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar?.title = getString(R.string.shoe_store_title)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu) {
+        Timber.d("Trying to hide the logout button on login screen")
+        menu.clear();
+    }
+
 }
